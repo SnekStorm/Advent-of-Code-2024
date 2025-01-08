@@ -1,4 +1,6 @@
 import re
+from itertools import count
+from logging import logProcesses
 from operator import index
 from re import findall, search, match
 # Helpful tool: https://pythex.org/
@@ -45,72 +47,88 @@ def run():
 
     print(f'Checksum: {result}')
 
-def move_data(location, data):
-    x = ''
-    rest = ''
-    y = list(data)
+class Block:
+    def __init__(self, _id, _size, _moved):
+        self.identifier = _id
+        self.size = _size
+        self.moved = _moved
 
-    for i,u in enumerate(y):
-        x.join(u)
-
-    for q in range(len(x)-len(data)):
-        rest = rest + '.'
-
-    return x, rest
+class Space:
+    def __init__(self, _elements, _OG_size, _current_size):
+        self.elements = _elements
+        self.OG_size = _OG_size
+        self.current_size = _current_size
 
 def run2():
     disk_map = ""
     disk_list = []
-    data_index = 0
-
-
-    with open("dummy.txt") as f:
+    space_list = []
+    identifier = 0
+    with open("input.txt") as f:
         for line in f:
-            for i, digit in enumerate(line):
-                x = ''
-                if i % 2 == 0:
-                    for amount in range(int(digit)):
-                        x = x +(str(data_index))
-                    disk_list.append(x)
-                    data_index = data_index + 1
+            disk_map = line
+            for i,c in enumerate(line):
+                if i %2 == 0:
+                    disk_list.append(Block(identifier, int(c), False))
+                    identifier = identifier + 1
                 else:
-                    for amount in range(int(digit)):
-                        x = x + '.'
-                    disk_list.append(x)
+                    space_list.append(Space(0,int(c),int(c)))
 
 
-    print(f'List: {disk_list}')
+    for _,d in enumerate(disk_list[::-1]):
+        space_position = 0
+        for i, space in enumerate(space_list):
+            # Stop if move pointer is above itself
+            if d.identifier <= i:
+                break
 
-    move_index = len(disk_list)
+            # Add value into list and change status to moved for the value that have been moved, so it doesn't get counted later
+            if int(space.current_size) >= d.size:
+                disk_list.insert(space_position+1+space.elements, Block(d.identifier, d.size, False))
+                d.moved = True
+                space.elements = space.elements +1
+                space.current_size = space.current_size - d.size
+
+                break
+            else: space_position = space_position +1 + space.elements
 
 
-    for space_index,i in enumerate(disk_list):
-        if i[0] == '.':
-            for n, j in enumerate(disk_list[:move_index].reverse()):
-                if j[0] != '.':
-                    if len(j) <= len(i):
-                        disk_list = disk_list[:space_index] + move_data(i,j) + disk_list[:space_index+1]
+    multi = 0
+    result = 0
+    data_pointer = 0
+    space_pointer = 0
+    for k, h in enumerate(disk_map):
+        if data_pointer == len(disk_list):
+            break
+        if k%2 == 0:
+            if not disk_list[data_pointer].moved:
+                for v in range(disk_list[data_pointer].size):
+                    result = result + disk_list[data_pointer].identifier * multi
+                    multi = multi + 1
+            else:
+                for q in range(disk_list[data_pointer].size):
+                    multi = multi + 1
+            data_pointer = data_pointer+1
+        else:
+            if len(space_list) == space_pointer:
+                continue
 
+            for s in range(space_list[space_pointer].elements):
+                for v in range(disk_list[data_pointer].size):
+                    result = result + disk_list[data_pointer].identifier * multi
+                    multi = multi + 1
+                data_pointer = data_pointer+1
 
+            for s in range(int(space_list[space_pointer].current_size)):
+                multi = multi + 1
+            space_pointer = space_pointer + 1
 
-    '''
-    empty_space = int(disk_map[i])
-            for d in disk_map[:move_index+1]:
-                if move_index <= 0:
-                    break
-                if empty_space >= int(disk_map[move_index]):
-                    for amount in range(int(disk_map[move_index])):
-                        disk_list.append(str(total_index))
-                    disk_map = disk_map[:move_index] + '0' + disk_map[move_index+1:]
+    # Too Low:  5040978786433
+    # Correct:  6250605700557 -- Forgot to end when pointer was above value to move (:
+    # Too High: 8446022420670
+    print(f'Result: {result}')
 
-                    move_index = move_index - 2
-                    total_index = total_index -1
-                    break
-                else:
-                    move_index = move_index - 2
-                    total_index = total_index -1
-    '''
-
+# -------------------
 
 
 if __name__ == '__main__':
