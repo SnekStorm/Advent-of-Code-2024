@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8044d24a-74bd-47f1-b917-62e0c20cbc02" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/AdventOfCode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day3/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day3/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day4/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day4/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day5/dummy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day5/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day5/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day6/dummy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day6/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day6/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day7/dummy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day7/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day7/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day8/dummy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day8/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day8/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day9/dummy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day9/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day9/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2qRVoCpmecQrLteHmOiWDjAI7Il" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/repos/AdventOfCode"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\repos\AdventOfCode" />
+      <recent name="C:\repos\AdventOfCode\Day6" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\repos\AdventOfCode\Day5" />
+      <recent name="C:\repos\AdventOfCode" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-1b1018131e27-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8044d24a-74bd-47f1-b917-62e0c20cbc02" name="Changes" comment="" />
+      <created>1734625548863</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734625548863</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Day6/main.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Day6/main.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Day9/main.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
